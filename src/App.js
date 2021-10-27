@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./App.css";
 import doggy from "./images/doggy.png";
+import Nav from "./components/Nav"
 
 export class App extends Component {
   state = {
@@ -22,13 +23,7 @@ export class App extends Component {
           <center><h1>Jacques Jean-Gilles</h1></center>
         </div>
 
-        <div className="nav" style={{ backgroundColor: this.state.backgroundColor }}>
-          <ul style={{ listStyleType: "none" }}>
-            <li onClick={() => this.handleColorChange("green")}>Green</li>
-            <li onClick={() => this.handleColorChange("red")}>Red</li>
-            <li onClick={() => this.handleColorChange("blue")}>Blue</li>
-          </ul>
-        </div>
+        <Nav test={this.handleColorChange} backgroundColor={this.state.backgroundColor} />
 
         <div className="content">
           Body
@@ -54,5 +49,6 @@ export class App extends Component {
   }
 }
 
-export default App
+export default App;
+
 
