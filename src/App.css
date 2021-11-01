@@ -19,7 +19,7 @@
 
 .nav {
   background-color: lightpink;
-  grid-area: nav;
+  grid-area: nav
 }
 
 .content {
